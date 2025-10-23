@@ -12,17 +12,16 @@
 
       <!-- Desktop Navigation Links -->
       <div class="navbar-links">
-        <a href="/" class="nav-link">Inicio</a>
-        <a href="/servicios" class="nav-link">Servicios</a>
+        <a href="/#quienes-somos" class="nav-link">Quienes somos</a>
+        <a href="/#servicios" class="nav-link">Servicios</a>
         <a href="/especialistas" class="nav-link">Especialistas</a>
-        <a href="/sobre-nosotros" class="nav-link">Sobre Nosotros</a>
-        <a href="/contacto" class="nav-link">Contacto</a>
+        <a href="/#preguntas" class="nav-link">FAQ</a>
       </div>
 
-      <!-- CTA Button (Desktop) -->
+      <!-- Contacto Button (Desktop) -->
       <div class="navbar-cta">
-        <a href="/agendar-cita" class="btn-primary">
-          Agendar Cita
+        <a href="/contacto" class="contacto-btn">
+          Contacto
         </a>
       </div>
 
@@ -42,13 +41,12 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
       <div class="mobile-menu-links">
-        <a href="/" class="mobile-nav-link">Inicio</a>
-        <a href="/servicios" class="mobile-nav-link">Servicios</a>
+        <a href="/#quienes-somos" class="mobile-nav-link">Quienes somos</a>
+        <a href="/#servicios" class="mobile-nav-link">Servicios</a>
         <a href="/especialistas" class="mobile-nav-link">Especialistas</a>
-        <a href="/sobre-nosotros" class="mobile-nav-link">Sobre Nosotros</a>
-        <a href="/contacto" class="mobile-nav-link">Contacto</a>
-        <a href="/agendar-cita" class="btn-primary mobile-cta-btn">
-          Agendar Cita
+        <a href="/#preguntas" class="mobile-nav-link">FAQ</a>
+        <a href="/contacto" class="contacto-btn mobile-contacto-btn">
+          Contacto
         </a>
       </div>
     </div>
@@ -144,7 +142,7 @@
     width: 100%;
   }
 
-  /* CTA Button */
+  /* Contacto Button */
   .navbar-cta {
     display: none;
   }
@@ -153,6 +151,29 @@
     .navbar-cta {
       display: block;
     }
+  }
+
+  .contacto-btn {
+    background-color: white;
+    color: var(--color-neutral-700);
+    border: 2px solid var(--color-neutral-300);
+    padding: var(--spacing-12) var(--spacing-24);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .contacto-btn:hover {
+    background-color: var(--color-neutral-100);
+    border-color: var(--color-neutral-400);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .contacto-btn:active {
+    transform: translateY(0);
   }
 
   /* Hamburger Button */
@@ -239,7 +260,7 @@
     color: var(--color-brand-blue);
   }
 
-  .mobile-cta-btn {
+  .mobile-contacto-btn {
     margin-top: var(--spacing-8);
     text-align: center;
     display: block;
