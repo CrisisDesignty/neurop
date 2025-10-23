@@ -32,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- About Us Section -->
-    <section class="py-16 px-6" style="background: white;">
+    <section class="py-24 px-6" style="background: white;">
       <div class="container-custom max-w-4xl text-center">
         <!-- Block 1: ¿Quienes somos? -->
         <div class="mb-12">
@@ -106,7 +106,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <!-- Nuestros Servicios Section -->
-    <section class="bg-white py-16 px-6">
+    <section class="py-32 px-6" style="background: white;">
       <div class="container-custom">
         <h2 class="text-4xl font-extrabold text-center mb-12 text-neutral-700">
           Nuestros Servicios
@@ -114,89 +114,181 @@ import Layout from '../layouts/Layout.astro';
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Service 1: Evaluación neuropsicológica -->
-          <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Evaluación neuropsicológica</h3>
-            <div class="service-description">
-              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
-                Proceso clínico especializado que permite identificar características individuales, fortalezas y áreas de dificultad en funciones cognitivas, conductuales y emocionales...
-                <span class="hidden-text"> Se realiza por neuropsicólogas certificadas en instrumentos estandarizados y con amplia experiencia en diagnóstico de trastornos del neurodesarrollo, deterioro cognitivo, dificultades de aprendizaje y condiciones emocionales. Permite establecer un perfil neuropsicológico y orientar estrategias de intervención individualizadas.</span>
-              </p>
-              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
-            </div>
-            <div class="text-sm text-neutral-600">
-              <span class="font-semibold">Especialistas:</span> Mtra. Berenice Orduño · Mtra. Karla Apodaca · Mtra. Alexia Díaz
-            </div>
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #0891B2;">
+            <h3 class="text-2xl font-bold mb-4" style="color: white;">Evaluación neuropsicológica</h3>
+            <p class="text-base leading-relaxed text-white mb-6">
+              Proceso clínico especializado para identificar fortalezas y áreas de dificultad en funciones cognitivas, conductuales y emocionales.
+            </p>
+            <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
+              Ver más →
+            </button>
           </div>
 
           <!-- Service 2: Evaluación de lenguaje -->
-          <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Evaluación de lenguaje</h3>
-            <div class="service-description">
-              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
-                Valoración especializada de las habilidades comunicativas y lingüísticas en sus distintos componentes: fonología, morfosintaxis, semántica, pragmática y discurso...
-                <span class="hidden-text"> Se evalúan tanto la comprensión como la expresión del lenguaje oral y escrito, identificando posibles alteraciones en el desarrollo del lenguaje, trastornos específicos del lenguaje, dificultades de lectoescritura o afectaciones derivadas de condiciones neurológicas. El proceso incluye pruebas estandarizadas, análisis de muestras de lenguaje espontáneo y observación en contextos naturales, con el fin de diseñar planes de intervención ajustados a las necesidades de cada persona.</span>
-              </p>
-              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
-            </div>
-            <div class="text-sm text-neutral-600">
-              <span class="font-semibold">Especialistas:</span> Dra. Natalia Nieblas · Mtra. Frida Salud
-            </div>
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #65A30D;">
+            <h3 class="text-2xl font-bold mb-4" style="color: white;">Evaluación de lenguaje</h3>
+            <p class="text-base leading-relaxed text-white mb-6">
+              Valoración integral de la comprensión, expresión y uso funcional del lenguaje oral y no verbal.
+            </p>
+            <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
+              Ver más →
+            </button>
           </div>
 
           <!-- Service 3: Terapia de comunicación, habla y lenguaje -->
-          <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Terapia de comunicación, habla y lenguaje</h3>
-            <div class="service-description">
-              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
-                Intervención terapéutica dirigida a mejorar las habilidades de comunicación, habla y lenguaje en personas con dificultades en estas áreas...
-                <span class="hidden-text"> Se trabaja de manera individualizada en aspectos como la articulación de sonidos, fluidez verbal, comprensión y expresión del lenguaje, uso funcional de la comunicación y desarrollo de habilidades pragmáticas. Las sesiones se diseñan con base en evidencia científica y se adaptan a la edad, intereses y necesidades de cada persona, promoviendo su participación activa en contextos cotidianos y favoreciendo su integración social y académica.</span>
-              </p>
-              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
-            </div>
-            <div class="text-sm text-neutral-600">
-              <span class="font-semibold">Especialistas:</span> Dra. Natalia Nieblas · Mtra. Frida Salud
-            </div>
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #7C3AED;">
+            <h3 class="text-2xl font-bold mb-4" style="color: white;">Terapia de comunicación, habla y lenguaje</h3>
+            <p class="text-base leading-relaxed text-white mb-6">
+              Intervención dirigida al desarrollo y fortalecimiento de habilidades comunicativas, incluyendo Comunicación Aumentativa y Alternativa (CAA).
+            </p>
+            <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
+              Ver más →
+            </button>
           </div>
 
           <!-- Service 4: Terapia de aprendizaje -->
-          <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Terapia de aprendizaje</h3>
-            <div class="service-description">
-              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
-                Intervención especializada para niños, adolescentes y adultos que presentan dificultades en el proceso de aprendizaje...
-                <span class="hidden-text"> ya sea por trastornos específicos del aprendizaje (dislexia, discalculia, disgrafía), déficit de atención, o por otras condiciones que afectan el rendimiento académico. A través de estrategias personalizadas y basadas en evidencia, se trabaja en el fortalecimiento de habilidades como la lectura, escritura, cálculo, comprensión lectora, organización y técnicas de estudio. El objetivo es potenciar las capacidades del individuo, promover su autonomía y mejorar su desempeño en el ámbito educativo.</span>
-              </p>
-              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
-            </div>
-            <div class="text-sm text-neutral-600">
-              <span class="font-semibold">Especialista:</span> Mtra. Carmen Lucía Camou
-            </div>
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #D97706;">
+            <h3 class="text-2xl font-bold mb-4" style="color: white;">Terapia de aprendizaje</h3>
+            <p class="text-base leading-relaxed text-white mb-6">
+              Espacio terapéutico centrado en la mejora de procesos cognitivos y académicos asociados a lectura, escritura y matemáticas.
+            </p>
+            <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
+              Ver más →
+            </button>
           </div>
 
           <!-- Service 5: Terapia emocional -->
-          <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Terapia emocional</h3>
-            <div class="service-description">
-              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
-                Espacio terapéutico orientado al bienestar emocional y psicológico de niños, adolescentes y adultos...
-                <span class="hidden-text"> Se abordan dificultades como ansiedad, depresión, problemas de conducta, manejo de emociones, autoestima, duelo, estrés y adaptación a cambios vitales. Mediante enfoques terapéuticos basados en evidencia (cognitivo-conductual, humanista, sistémico, entre otros), se acompaña a la persona en el proceso de comprensión y regulación de sus emociones, el desarrollo de habilidades de afrontamiento y la construcción de recursos internos que favorezcan su salud mental y calidad de vida.</span>
-              </p>
-              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
-            </div>
-            <div class="text-sm text-neutral-600">
-              <span class="font-semibold">Especialistas:</span> Lic. Yuliana Trujillo · Lic. Pilar Celaya · Lic. Loredana Mardueño
-            </div>
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #DB2777;">
+            <h3 class="text-2xl font-bold mb-4" style="color: white;">Terapia emocional</h3>
+            <p class="text-base leading-relaxed text-white mb-6">
+              Atención psicológica enfocada en el manejo de emociones, regulación conductual y desarrollo de recursos personales.
+            </p>
+            <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
+              Ver más →
+            </button>
           </div>
 
           <!-- Service 6: Formación y asesoría especializada -->
-          <div class="bg-white rounded-lg shadow-lg p-8">
-            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Formación y asesoría especializada</h3>
-            <div class="service-description">
-              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
-                Servicio dirigido a profesionales de la salud, educación y otras disciplinas interesadas en actualizar o profundizar sus conocimientos...
-                <span class="hidden-text"> en neuropsicología, desarrollo infantil, evaluación psicológica, intervención terapéutica y temas afines. Se ofrecen talleres, cursos, supervisión clínica y asesorías personalizadas, diseñados a partir de las necesidades específicas de cada grupo o institución. También se brinda orientación a familias y escuelas sobre estrategias de apoyo para niños y adolescentes con necesidades educativas especiales, trastornos del neurodesarrollo o dificultades emocionales y conductuales. El objetivo es fortalecer las competencias de quienes acompañan a estas personas, promoviendo prácticas basadas en evidencia y un abordaje integral y respetuoso.</span>
-              </p>
-              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #059669;">
+            <h3 class="text-2xl font-bold mb-4" style="color: white;">Formación y asesoría especializada</h3>
+            <p class="text-base leading-relaxed text-white mb-6">
+              Ofrecemos pláticas, cursos y asesoría a equipos escolares y terapéuticos sobre detección y estrategias de intervención.
+            </p>
+            <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
+              Ver más →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const moreButtons = document.querySelectorAll('.service-more-btn');
+        
+        moreButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            alert('La página de servicios detallados estará disponible próximamente.');
+          });
+        });
+      });
+    </script>
+
+    <!-- Preguntas y respuestas Section -->
+    <section class="bg-white py-24 px-6">
+      <div class="container-custom">
+        <h2 class="text-4xl font-extrabold text-center mb-12 text-neutral-700">
+          Preguntas y respuestas
+        </h2>
+        
+        <div class="max-w-3xl mx-auto">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item border-b border-neutral-200">
+            <button class="faq-trigger w-full text-left p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+              <span class="text-lg font-semibold text-neutral-700">¿Qué es una evaluación neuropsicológica?</span>
+              <svg class="faq-icon w-6 h-6 flex-shrink-0 text-neutral-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden">
+              <div class="p-4 text-neutral-600 leading-relaxed">
+                Una evaluación neuropsicológica es un proceso clínico especializado que permite identificar el perfil de fortalezas y debilidades en el funcionamiento cognitivo, emocional y conductual de una persona. A través de entrevistas, observación clínica y la aplicación de pruebas estandarizadas, se obtiene información detallada sobre áreas como la atención, memoria, lenguaje, funciones ejecutivas, habilidades visoespaciales y regulación emocional.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item border-b border-neutral-200">
+            <button class="faq-trigger w-full text-left p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+              <span class="text-lg font-semibold text-neutral-700">¿Quién puede realizar una evaluación neuropsicológica?</span>
+              <svg class="faq-icon w-6 h-6 flex-shrink-0 text-neutral-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden">
+              <div class="p-4 text-neutral-600 leading-relaxed">
+                Las evaluaciones neuropsicológicas deben ser realizadas por neuropsicólogos certificados, profesionales especializados con formación avanzada en neuropsicología clínica. En nuestro centro, todas las evaluaciones son realizadas por neuropsicólogas especialistas certificadas en los instrumentos internacionales de referencia para el diagnóstico.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item border-b border-neutral-200">
+            <button class="faq-trigger w-full text-left p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+              <span class="text-lg font-semibold text-neutral-700">¿En qué consiste una evaluación neuropsicológica?</span>
+              <svg class="faq-icon w-6 h-6 flex-shrink-0 text-neutral-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden">
+              <div class="p-4 text-neutral-600 leading-relaxed">
+                La evaluación consiste en varias sesiones que incluyen: entrevista inicial con el paciente y/o familia, aplicación de pruebas estandarizadas específicas según la edad y motivo de consulta, observación clínica del comportamiento, análisis e integración de resultados, y elaboración de un informe detallado con recomendaciones personalizadas. El proceso puede tomar entre 2 y 4 sesiones dependiendo de cada caso.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item border-b border-neutral-200">
+            <button class="faq-trigger w-full text-left p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+              <span class="text-lg font-semibold text-neutral-700">¿Qué diagnostican?</span>
+              <svg class="faq-icon w-6 h-6 flex-shrink-0 text-neutral-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden">
+              <div class="p-4 text-neutral-600 leading-relaxed">
+                Las evaluaciones neuropsicológicas permiten diagnosticar trastornos del neurodesarrollo (TDAH, TEA, trastornos del aprendizaje), deterioro cognitivo, secuelas de daño cerebral, trastornos del lenguaje, dificultades de aprendizaje, y condiciones emocionales que afectan el funcionamiento cognitivo. Los resultados orientan la toma de decisiones clínicas, educativas y fundamentan el diseño de intervenciones personalizadas.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item border-b border-neutral-200">
+            <button class="faq-trigger w-full text-left p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+              <span class="text-lg font-semibold text-neutral-700">¿Qué pruebas se utilizan?</span>
+              <svg class="faq-icon w-6 h-6 flex-shrink-0 text-neutral-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden">
+              <div class="p-4 text-neutral-600 leading-relaxed">
+                Utilizamos instrumentos estandarizados y validados internacionalmente, seleccionados según la edad y necesidades específicas de cada persona. Estos incluyen escalas de inteligencia (WISC, WAIS), pruebas de atención y funciones ejecutivas, evaluaciones de memoria, lenguaje, habilidades visoespaciales, y cuestionarios de comportamiento y regulación emocional. Todas nuestras especialistas están certificadas en estos instrumentos.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item border-b border-neutral-200">
+            <button class="faq-trigger w-full text-left p-4 flex justify-between items-center hover:bg-neutral-50 transition-colors">
+              <span class="text-lg font-semibold text-neutral-700">¿Por qué el tiempo de espera puede ser prolongado?</span>
+              <svg class="faq-icon w-6 h-6 flex-shrink-0 text-neutral-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-content hidden">
+              <div class="p-4 text-neutral-600 leading-relaxed">
+                El tiempo de espera puede variar debido a la alta demanda de servicios especializados y al proceso meticuloso que requiere cada evaluación. Cada caso necesita tiempo suficiente para la aplicación de pruebas, análisis detallado de resultados, integración de información y elaboración de informes completos. Priorizamos la calidad sobre la cantidad para garantizar evaluaciones precisas y recomendaciones efectivas.
+              </div>
             </div>
           </div>
         </div>
@@ -205,63 +297,101 @@ import Layout from '../layouts/Layout.astro';
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const readMoreButtons = document.querySelectorAll('.read-more-btn');
+        const faqTriggers = document.querySelectorAll('.faq-trigger');
         
-        readMoreButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            const description = button.closest('.service-description');
-            if (!description) return;
+        faqTriggers.forEach(trigger => {
+          trigger.addEventListener('click', () => {
+            const faqItem = trigger.closest('.faq-item');
+            const content = faqItem?.querySelector('.faq-content');
+            const icon = trigger.querySelector('.faq-icon') as HTMLElement;
             
-            const hiddenText = description.querySelector('.hidden-text') as HTMLElement;
-            if (!hiddenText) return;
+            if (!content || !icon) return;
             
-            if (hiddenText.style.display === 'inline') {
-              hiddenText.style.display = 'none';
-              button.textContent = 'Leer más';
+            // Toggle current item
+            const isOpen = !content.classList.contains('hidden');
+            
+            if (isOpen) {
+              content.classList.add('hidden');
+              icon.style.transform = 'rotate(0deg)';
             } else {
-              hiddenText.style.display = 'inline';
-              button.textContent = 'Leer menos';
+              content.classList.remove('hidden');
+              icon.style.transform = 'rotate(180deg)';
             }
           });
         });
       });
     </script>
 
-    <style>
-      .hidden-text {
-        display: none;
-      }
-    </style>
-
-    <!-- About Section -->
-    <section class="section-padding">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white px-6 py-24">
       <div class="container-custom">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-          <h2 style="margin-bottom: 24px;">¿Por qué elegir Neurop?</h2>
-          <p style="color: #4A5568; font-size: 1.125rem; line-height: 1.8;">
-            Somos un equipo de profesionales especializados en neuropsicología, comprometidos 
-            con brindar atención de calidad y personalizada. Utilizamos las técnicas más 
-            actualizadas y basadas en evidencia científica para garantizar los mejores resultados.
-          </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Column 1: Ubicación -->
+          <div>
+            <h3 class="text-xl font-bold mb-4" style="color: white;">Ubicados en</h3>
+            <p class="mb-4 leading-relaxed">
+              Av. Nose #101, Col. Los Arcos.<br>
+              83250 Hermosillo, Sonora
+            </p>
+            <div class="mt-4">
+              <img
+                src="https://via.placeholder.com/300x200/374151/9CA3AF?text=Mapa+Estatico"
+                alt="Mapa de ubicación"
+                class="rounded-lg w-full max-w-sm"
+              />
+            </div>
+          </div>
+
+          <!-- Column 2: Horarios y Contacto -->
+          <div>
+            <h3 class="text-xl font-bold mb-4" style="color: white;">Horarios de atención</h3>
+            <p class="mb-2">LUNES A VIERNES</p>
+            <p class="mb-4">9:00 a.m. - 18:00 p.m.</p>
+            <p class="mb-2">SÁBADOS</p>
+            <p class="mb-6">10:00 a.m. - 15:00 p.m.</p>
+            <a
+              href="/contacto"
+              class="inline-block text-white px-6 py-3 rounded-md font-semibold transition-all hover:scale-105"
+              style="background-color: #7AC046;"
+            >
+              Contacto
+            </a>
+          </div>
+
+          <!-- Column 3: Redes Sociales y Secciones -->
+          <div>
+            <h3 class="text-xl font-bold mb-4" style="color: white;">Síguenos</h3>
+            <div class="flex gap-4 mb-8">
+              <!-- Instagram Icon -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80 transition-opacity">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <!-- Facebook Icon -->
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-white hover:opacity-80 transition-opacity">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+            </div>
+
+            <h3 class="text-xl font-bold mb-4" style="color: white;">Secciones</h3>
+            <ul class="space-y-2">
+              <li><a href="/" class="hover:opacity-80 transition-opacity">Inicio</a></li>
+              <li><a href="/#quienes-somos" class="hover:opacity-80 transition-opacity">Quienes somos</a></li>
+              <li><a href="/servicios" class="hover:opacity-80 transition-opacity">Servicios</a></li>
+              <li><a href="/especialistas" class="hover:opacity-80 transition-opacity">Especialistas</a></li>
+              <li><a href="/#preguntas" class="hover:opacity-80 transition-opacity">Preguntas</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-sm">Términos y condiciones</p>
         </div>
       </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section-padding" style="background: linear-gradient(135deg, #7AC046 0%, #2EB5D0 100%);">
-      <div class="container-custom">
-        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-          <h2 style="color: white; margin-bottom: 24px;">
-            ¿Listo para comenzar?
-          </h2>
-          <p style="color: white; font-size: 1.125rem; margin-bottom: 32px; opacity: 0.95;">
-            Agenda tu cita hoy y da el primer paso hacia tu bienestar.
-          </p>
-          <a href="/agendar-cita" class="btn-primary" style="background-color: white; color: #7AC046;">
-            Agendar Cita Ahora
-          </a>
-        </div>
-      </div>
-    </section>
+    </footer>
   </main>
 </Layout>
