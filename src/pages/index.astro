@@ -1,16 +1,267 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout 
+  title="Neurop - Centro de Neuropsicología" 
+  description="Centro especializado en neuropsicología. Evaluación y tratamiento profesional para niños, adolescentes y adultos en Hermosillo, Sonora."
+>
+  <main>
+    <!-- Hero Section -->
+    <section class="section-padding" style="background: white; min-height: 80vh; display: flex; align-items: center;">
+      <div class="container-custom">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <img src="/NEU-logo3.svg" alt="Neurop" style="max-width: 300px; width: 50%; height: auto; margin: 0 auto 32px; display: block;" />
+          <h1 style="color: #2D2D2D; font-size: 3rem; margin-bottom: 24px;">
+            Bienvenido/a
+          </h1>
+          <p style="color: #4A5568; font-size: 1.25rem; margin-bottom: 32px;">
+            Centro especializado en neuropsicología dedicado a la evaluación y tratamiento
+            profesional para niños, adolescentes y adultos.
+          </p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/agendar-cita" class="btn-primary">
+              Agendar Cita
+            </a>
+            <a href="/servicios" class="btn-outline">
+              Conocer Servicios
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-16 px-6" style="background: white;">
+      <div class="container-custom max-w-4xl text-center">
+        <!-- Block 1: ¿Quienes somos? -->
+        <div class="mb-12">
+          <h2 class="text-3xl font-bold text-neutral-700 mb-6">
+            ¿Quiénes somos?
+          </h2>
+          <p class="text-lg leading-relaxed text-neutral-600">
+            Centro neurop es un espacio clínico dedicado al apoyo diagnóstico y la intervención neuropsicológica.
+          </p>
+        </div>
+
+        <!-- Block 2: Nuestro objetivo -->
+        <div class="mt-12 mb-12">
+          <h2 class="text-3xl font-bold text-neutral-700 mb-6">
+            Nuestro objetivo
+          </h2>
+          <p class="text-lg leading-relaxed text-neutral-600">
+            Comprender de manera integral el funcionamiento cognitivo, emocional y conductual de cada persona, para orientar estrategias de apoyo individualizadas que mejoren su calidad de vida y su participación en los distintos entornos.
+          </p>
+        </div>
+
+        <!-- Block 3: Trabajamos con -->
+        <div class="mt-12">
+          <h2 class="text-3xl font-bold text-neutral-700 mb-6">
+            Trabajamos con
+          </h2>
+          <ul class="text-lg leading-relaxed text-neutral-600 space-y-4 inline-block text-left">
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Familias</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Médicos</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Terapeutas</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Escuelas para asegurar un abordaje interdisciplinario y ético</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Callout Card -->
+        <div class="max-w-2xl mx-auto my-12 bg-neutral-100 p-8 rounded-lg text-center">
+          <!-- Attention Icon -->
+          <div class="flex justify-center mb-6">
+            <svg class="w-20 h-20" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <p class="text-lg leading-relaxed text-neutral-600 mb-6">
+            Todas nuestras evaluaciones son realizadas por neuropsicólogas especialistas certificadas en los instrumentos internacionales de referencia para el diagnóstico y nuestras intervenciones se diseñan a partir de evidencia científica actualizada.
+          </p>
+          <a href="/especialistas" class="inline-block bg-neutral-700 text-white rounded-md px-6 py-3 font-semibold hover:bg-neutral-600 transition-colors duration-300">
+            Especialistas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestros Servicios Section -->
+    <section class="bg-white py-16 px-6">
+      <div class="container-custom">
+        <h2 class="text-4xl font-extrabold text-center mb-12 text-neutral-700">
+          Nuestros Servicios
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1: Evaluación neuropsicológica -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Evaluación neuropsicológica</h3>
+            <div class="service-description">
+              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
+                Proceso clínico especializado que permite identificar características individuales, fortalezas y áreas de dificultad en funciones cognitivas, conductuales y emocionales...
+                <span class="hidden-text"> Se realiza por neuropsicólogas certificadas en instrumentos estandarizados y con amplia experiencia en diagnóstico de trastornos del neurodesarrollo, deterioro cognitivo, dificultades de aprendizaje y condiciones emocionales. Permite establecer un perfil neuropsicológico y orientar estrategias de intervención individualizadas.</span>
+              </p>
+              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
+            </div>
+            <div class="text-sm text-neutral-600">
+              <span class="font-semibold">Especialistas:</span> Mtra. Berenice Orduño · Mtra. Karla Apodaca · Mtra. Alexia Díaz
+            </div>
+          </div>
+
+          <!-- Service 2: Evaluación de lenguaje -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Evaluación de lenguaje</h3>
+            <div class="service-description">
+              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
+                Valoración especializada de las habilidades comunicativas y lingüísticas en sus distintos componentes: fonología, morfosintaxis, semántica, pragmática y discurso...
+                <span class="hidden-text"> Se evalúan tanto la comprensión como la expresión del lenguaje oral y escrito, identificando posibles alteraciones en el desarrollo del lenguaje, trastornos específicos del lenguaje, dificultades de lectoescritura o afectaciones derivadas de condiciones neurológicas. El proceso incluye pruebas estandarizadas, análisis de muestras de lenguaje espontáneo y observación en contextos naturales, con el fin de diseñar planes de intervención ajustados a las necesidades de cada persona.</span>
+              </p>
+              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
+            </div>
+            <div class="text-sm text-neutral-600">
+              <span class="font-semibold">Especialistas:</span> Dra. Natalia Nieblas · Mtra. Frida Salud
+            </div>
+          </div>
+
+          <!-- Service 3: Terapia de comunicación, habla y lenguaje -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Terapia de comunicación, habla y lenguaje</h3>
+            <div class="service-description">
+              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
+                Intervención terapéutica dirigida a mejorar las habilidades de comunicación, habla y lenguaje en personas con dificultades en estas áreas...
+                <span class="hidden-text"> Se trabaja de manera individualizada en aspectos como la articulación de sonidos, fluidez verbal, comprensión y expresión del lenguaje, uso funcional de la comunicación y desarrollo de habilidades pragmáticas. Las sesiones se diseñan con base en evidencia científica y se adaptan a la edad, intereses y necesidades de cada persona, promoviendo su participación activa en contextos cotidianos y favoreciendo su integración social y académica.</span>
+              </p>
+              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
+            </div>
+            <div class="text-sm text-neutral-600">
+              <span class="font-semibold">Especialistas:</span> Dra. Natalia Nieblas · Mtra. Frida Salud
+            </div>
+          </div>
+
+          <!-- Service 4: Terapia de aprendizaje -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Terapia de aprendizaje</h3>
+            <div class="service-description">
+              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
+                Intervención especializada para niños, adolescentes y adultos que presentan dificultades en el proceso de aprendizaje...
+                <span class="hidden-text"> ya sea por trastornos específicos del aprendizaje (dislexia, discalculia, disgrafía), déficit de atención, o por otras condiciones que afectan el rendimiento académico. A través de estrategias personalizadas y basadas en evidencia, se trabaja en el fortalecimiento de habilidades como la lectura, escritura, cálculo, comprensión lectora, organización y técnicas de estudio. El objetivo es potenciar las capacidades del individuo, promover su autonomía y mejorar su desempeño en el ámbito educativo.</span>
+              </p>
+              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
+            </div>
+            <div class="text-sm text-neutral-600">
+              <span class="font-semibold">Especialista:</span> Mtra. Carmen Lucía Camou
+            </div>
+          </div>
+
+          <!-- Service 5: Terapia emocional -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Terapia emocional</h3>
+            <div class="service-description">
+              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
+                Espacio terapéutico orientado al bienestar emocional y psicológico de niños, adolescentes y adultos...
+                <span class="hidden-text"> Se abordan dificultades como ansiedad, depresión, problemas de conducta, manejo de emociones, autoestima, duelo, estrés y adaptación a cambios vitales. Mediante enfoques terapéuticos basados en evidencia (cognitivo-conductual, humanista, sistémico, entre otros), se acompaña a la persona en el proceso de comprensión y regulación de sus emociones, el desarrollo de habilidades de afrontamiento y la construcción de recursos internos que favorezcan su salud mental y calidad de vida.</span>
+              </p>
+              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
+            </div>
+            <div class="text-sm text-neutral-600">
+              <span class="font-semibold">Especialistas:</span> Lic. Yuliana Trujillo · Lic. Pilar Celaya · Lic. Loredana Mardueño
+            </div>
+          </div>
+
+          <!-- Service 6: Formación y asesoría especializada -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-3 text-neutral-700">Formación y asesoría especializada</h3>
+            <div class="service-description">
+              <p class="text-base leading-relaxed text-neutral-600 mb-4 service-text">
+                Servicio dirigido a profesionales de la salud, educación y otras disciplinas interesadas en actualizar o profundizar sus conocimientos...
+                <span class="hidden-text"> en neuropsicología, desarrollo infantil, evaluación psicológica, intervención terapéutica y temas afines. Se ofrecen talleres, cursos, supervisión clínica y asesorías personalizadas, diseñados a partir de las necesidades específicas de cada grupo o institución. También se brinda orientación a familias y escuelas sobre estrategias de apoyo para niños y adolescentes con necesidades educativas especiales, trastornos del neurodesarrollo o dificultades emocionales y conductuales. El objetivo es fortalecer las competencias de quienes acompañan a estas personas, promoviendo prácticas basadas en evidencia y un abordaje integral y respetuoso.</span>
+              </p>
+              <button class="read-more-btn text-sm font-semibold hover:underline mb-4" style="color: #2EB5D0;">Leer más</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const readMoreButtons = document.querySelectorAll('.read-more-btn');
+        
+        readMoreButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const description = button.closest('.service-description');
+            if (!description) return;
+            
+            const hiddenText = description.querySelector('.hidden-text') as HTMLElement;
+            if (!hiddenText) return;
+            
+            if (hiddenText.style.display === 'inline') {
+              hiddenText.style.display = 'none';
+              button.textContent = 'Leer más';
+            } else {
+              hiddenText.style.display = 'inline';
+              button.textContent = 'Leer menos';
+            }
+          });
+        });
+      });
+    </script>
+
+    <style>
+      .hidden-text {
+        display: none;
+      }
+    </style>
+
+    <!-- About Section -->
+    <section class="section-padding">
+      <div class="container-custom">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h2 style="margin-bottom: 24px;">¿Por qué elegir Neurop?</h2>
+          <p style="color: #4A5568; font-size: 1.125rem; line-height: 1.8;">
+            Somos un equipo de profesionales especializados en neuropsicología, comprometidos 
+            con brindar atención de calidad y personalizada. Utilizamos las técnicas más 
+            actualizadas y basadas en evidencia científica para garantizar los mejores resultados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding" style="background: linear-gradient(135deg, #7AC046 0%, #2EB5D0 100%);">
+      <div class="container-custom">
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+          <h2 style="color: white; margin-bottom: 24px;">
+            ¿Listo para comenzar?
+          </h2>
+          <p style="color: white; font-size: 1.125rem; margin-bottom: 32px; opacity: 0.95;">
+            Agenda tu cita hoy y da el primer paso hacia tu bienestar.
+          </p>
+          <a href="/agendar-cita" class="btn-primary" style="background-color: white; color: #7AC046;">
+            Agendar Cita Ahora
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

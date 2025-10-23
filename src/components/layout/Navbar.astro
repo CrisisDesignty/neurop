@@ -1,0 +1,285 @@
+---
+// Navbar component with sticky positioning and responsive hamburger menu
+---
+
+<nav class="navbar-sticky">
+  <div class="container-custom">
+    <div class="navbar-container">
+      <!-- Logo -->
+      <a href="/" class="navbar-logo">
+        <img src="/NEU-logo3_1.svg" alt="Neurop Logo" class="logo-image" />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="navbar-links">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/servicios" class="nav-link">Servicios</a>
+        <a href="/especialistas" class="nav-link">Especialistas</a>
+        <a href="/sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+        <a href="/contacto" class="nav-link">Contacto</a>
+      </div>
+
+      <!-- CTA Button (Desktop) -->
+      <div class="navbar-cta">
+        <a href="/agendar-cita" class="btn-primary">
+          Agendar Cita
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Button (Mobile) -->
+      <button 
+        class="hamburger-button" 
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        id="hamburger-btn"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-links">
+        <a href="/" class="mobile-nav-link">Inicio</a>
+        <a href="/servicios" class="mobile-nav-link">Servicios</a>
+        <a href="/especialistas" class="mobile-nav-link">Especialistas</a>
+        <a href="/sobre-nosotros" class="mobile-nav-link">Sobre Nosotros</a>
+        <a href="/contacto" class="mobile-nav-link">Contacto</a>
+        <a href="/agendar-cita" class="btn-primary mobile-cta-btn">
+          Agendar Cita
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Sticky Navbar */
+  .navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .navbar-sticky.scrolled {
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Navbar Container */
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+  }
+
+  /* Logo */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-logo:hover {
+    transform: scale(1.05);
+  }
+
+  .logo-image {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .logo-image {
+      height: 48px;
+    }
+  }
+
+  /* Desktop Navigation Links */
+  .navbar-links {
+    display: none;
+    gap: var(--spacing-32);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-links {
+      display: flex;
+    }
+  }
+
+  .nav-link {
+    color: var(--color-neutral-600);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-brand-blue);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--color-brand-blue);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* CTA Button */
+  .navbar-cta {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .navbar-cta {
+      display: block;
+    }
+  }
+
+  /* Hamburger Button */
+  .hamburger-button {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-8);
+    z-index: 60;
+    transition: transform 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .hamburger-button {
+      display: none;
+    }
+  }
+
+  .hamburger-button:hover {
+    transform: scale(1.1);
+  }
+
+  .hamburger-line {
+    width: 24px;
+    height: 3px;
+    background-color: var(--color-neutral-700);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger-button.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .hamburger-button.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-button.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+
+  .mobile-menu.active {
+    max-height: 500px;
+    padding-bottom: var(--spacing-24);
+  }
+
+  .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+    padding-top: var(--spacing-16);
+  }
+
+  .mobile-nav-link {
+    color: var(--color-neutral-600);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: var(--spacing-12) var(--spacing-16);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav-link:hover {
+    background-color: var(--color-neutral-100);
+    color: var(--color-brand-blue);
+  }
+
+  .mobile-cta-btn {
+    margin-top: var(--spacing-8);
+    text-align: center;
+    display: block;
+  }
+</style>
+
+<script>
+  // Hamburger menu toggle functionality
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navbar = document.querySelector('.navbar-sticky');
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+      const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+      
+      hamburgerBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+      hamburgerBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Add shadow on scroll
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
+</script>
