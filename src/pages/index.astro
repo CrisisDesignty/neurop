@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
     <section class="section-padding" style="background: white; min-height: 80vh; display: flex; align-items: center;">
       <div class="container-custom">
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-          <img src="/NEU-logo3.svg" alt="Neurop" style="max-width: 300px; width: 50%; height: auto; margin: 0 auto 32px; display: block;" />
+          <img src="/NEU-logo3.svg" alt="Neurop" style="max-width: 280px; width: 50%; height: auto; margin: 0 auto 32px; display: block;" />
           <h1 style="color: #2D2D2D; font-size: 3rem; margin-bottom: 24px;">
             Bienvenido/a
           </h1>
@@ -23,8 +23,8 @@ import Layout from '../layouts/Layout.astro';
             <a href="/agendar-cita" class="btn-primary">
               Agendar Cita
             </a>
-            <a href="/servicios" class="btn-outline">
-              Conocer Servicios
+            <a href="/especialistas" class="btn-outline">
+              Especialistas
             </a>
           </div>
         </div>
@@ -33,72 +33,75 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- About Us Section -->
     <section id="quienes-somos" class="py-24 px-6" style="background: white;">
-      <div class="container-custom max-w-4xl text-center">
-        <!-- Block 1: ¿Quienes somos? -->
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold text-neutral-700 mb-6">
-            ¿Quiénes somos?
-          </h2>
-          <p class="text-lg leading-relaxed text-neutral-600">
-            Centro neurop es un espacio clínico dedicado al apoyo diagnóstico y la intervención neuropsicológica.
-          </p>
-        </div>
+      <div class="container-custom">
+        <!-- Three Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+          <!-- Block 1: ¿Quienes somos? -->
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-neutral-700 mb-6">
+              ¿Quiénes somos?
+            </h2>
+            <p class="text-lg leading-relaxed text-neutral-600">
+              Centro neurop es un espacio clínico dedicado al apoyo diagnóstico y la intervención neuropsicológica.
+            </p>
+          </div>
 
-        <!-- Block 2: Nuestro objetivo -->
-        <div class="mt-12 mb-12">
-          <h2 class="text-3xl font-bold text-neutral-700 mb-6">
-            Nuestro objetivo
-          </h2>
-          <p class="text-lg leading-relaxed text-neutral-600">
-            Comprender de manera integral el funcionamiento cognitivo, emocional y conductual de cada persona, para orientar estrategias de apoyo individualizadas que mejoren su calidad de vida y su participación en los distintos entornos.
-          </p>
-        </div>
+          <!-- Block 2: Nuestro objetivo -->
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-neutral-700 mb-6">
+              Nuestro objetivo
+            </h2>
+            <p class="text-lg leading-relaxed text-neutral-600">
+              Comprender de manera integral el funcionamiento cognitivo, emocional y conductual de cada persona, para orientar estrategias de apoyo individualizadas que mejoren su calidad de vida y su participación en los distintos entornos.
+            </p>
+          </div>
 
-        <!-- Block 3: Trabajamos con -->
-        <div class="mt-12">
-          <h2 class="text-3xl font-bold text-neutral-700 mb-6">
-            Trabajamos con
-          </h2>
-          <ul class="text-lg leading-relaxed text-neutral-600 space-y-4 inline-block text-left">
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Familias</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Médicos</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Terapeutas</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-              </svg>
-              <span>Escuelas para asegurar un abordaje interdisciplinario y ético</span>
-            </li>
-          </ul>
+          <!-- Block 3: Trabajamos con -->
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-neutral-700 mb-6">
+              Trabajamos con
+            </h2>
+            <ul class="text-lg leading-relaxed text-neutral-600 space-y-4 inline-block text-left">
+              <li class="flex items-center gap-3">
+                <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Familias</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Médicos</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Terapeutas</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-6 h-6 flex-shrink-0" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Escuelas</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Callout Card -->
-        <div class="max-w-2xl mx-auto my-12 bg-neutral-100 p-8 rounded-lg text-center">
+        <div class="max-w-3xl mx-auto mt-16 bg-gradient-to-br from-cyan-50 to-blue-50 p-10 rounded-xl text-center shadow-md">
           <!-- Attention Icon -->
-          <div class="flex justify-center mb-6">
+          <div class="flex justify-center mb-8">
             <svg class="w-20 h-20" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <p class="text-lg leading-relaxed text-neutral-600 mb-6">
+          <p class="text-lg leading-relaxed text-neutral-600 mb-8 px-4">
             Todas nuestras evaluaciones son realizadas por neuropsicólogas especialistas certificadas en los instrumentos internacionales de referencia para el diagnóstico y nuestras intervenciones se diseñan a partir de evidencia científica actualizada.
           </p>
-          <a href="/especialistas" class="inline-block bg-neutral-700 text-white rounded-md px-6 py-3 font-semibold hover:bg-neutral-600 transition-colors duration-300">
+          <a href="/especialistas" class="btn-outline">
             Especialistas
           </a>
         </div>
@@ -112,9 +115,9 @@ import Layout from '../layouts/Layout.astro';
           Nuestros Servicios
         </h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <!-- Service 1: Evaluación neuropsicológica -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #0891B2;">
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #0891B2 0%, #06b6d4 100%);">
             <h3 class="text-2xl font-bold mb-4" style="color: white;">Evaluación neuropsicológica</h3>
             <p class="text-base leading-relaxed text-white mb-6">
               Proceso clínico especializado para identificar fortalezas y áreas de dificultad en funciones cognitivas, conductuales y emocionales.
@@ -125,7 +128,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- Service 2: Evaluación de lenguaje -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #65A30D;">
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #65A30D 0%, #84cc16 100%);">
             <h3 class="text-2xl font-bold mb-4" style="color: white;">Evaluación de lenguaje</h3>
             <p class="text-base leading-relaxed text-white mb-6">
               Valoración integral de la comprensión, expresión y uso funcional del lenguaje oral y no verbal.
@@ -136,7 +139,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- Service 3: Terapia de comunicación, habla y lenguaje -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #7C3AED;">
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #7C3AED 0%, #a78bfa 100%);">
             <h3 class="text-2xl font-bold mb-4" style="color: white;">Terapia de comunicación, habla y lenguaje</h3>
             <p class="text-base leading-relaxed text-white mb-6">
               Intervención dirigida al desarrollo y fortalecimiento de habilidades comunicativas, incluyendo Comunicación Aumentativa y Alternativa (CAA).
@@ -147,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- Service 4: Terapia de aprendizaje -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #D97706;">
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #D97706 0%, #fbbf24 100%);">
             <h3 class="text-2xl font-bold mb-4" style="color: white;">Terapia de aprendizaje</h3>
             <p class="text-base leading-relaxed text-white mb-6">
               Espacio terapéutico centrado en la mejora de procesos cognitivos y académicos asociados a lectura, escritura y matemáticas.
@@ -158,7 +161,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- Service 5: Terapia emocional -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #DB2777;">
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #DB2777 0%, #f472b6 100%);">
             <h3 class="text-2xl font-bold mb-4" style="color: white;">Terapia emocional</h3>
             <p class="text-base leading-relaxed text-white mb-6">
               Atención psicológica enfocada en el manejo de emociones, regulación conductual y desarrollo de recursos personales.
@@ -169,7 +172,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- Service 6: Formación y asesoría especializada -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background-color: #059669;">
+          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #059669 0%, #34d399 100%);">
             <h3 class="text-2xl font-bold mb-4" style="color: white;">Formación y asesoría especializada</h3>
             <p class="text-base leading-relaxed text-white mb-6">
               Ofrecemos pláticas, cursos y asesoría a equipos escolares y terapéuticos sobre detección y estrategias de intervención.
