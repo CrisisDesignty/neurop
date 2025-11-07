@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
 >
   <main>
     <!-- Hero Section -->
-    <section class="section-padding" style="background: white; min-height: 80vh; display: flex; align-items: center;">
+    <section class="section-padding" style="background-image: url('/hero-1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 80vh; display: flex; align-items: center;">
       <div class="container-custom">
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
           <img src="/NEU-logo3.svg" alt="Neurop" style="max-width: 280px; width: 50%; height: auto; margin: 0 auto 32px; display: block;" />
@@ -91,17 +91,17 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Callout Card -->
-        <div class="max-w-3xl mx-auto mt-16 bg-gradient-to-br from-cyan-50 to-blue-50 p-10 rounded-xl text-center shadow-md">
+        <div class="max-w-3xl mx-auto mt-16 bg-gradient-to-br from-cyan-50 to-blue-50 px-8 py-10 rounded-xl text-center shadow-md">
           <!-- Attention Icon -->
-          <div class="flex justify-center mb-8">
+          <div class="flex justify-center mb-2">
             <svg class="w-20 h-20" style="color: #2EB5D0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <p class="text-lg leading-relaxed text-neutral-600 mb-8 px-4">
+          <p class="text-lg leading-relaxed text-neutral-600 px-4 mb-10">
             Todas nuestras evaluaciones son realizadas por neuropsicólogas especialistas certificadas en los instrumentos internacionales de referencia para el diagnóstico y nuestras intervenciones se diseñan a partir de evidencia científica actualizada.
           </p>
-          <a href="/especialistas" class="btn-outline">
+          <a href="/especialistas" class="btn-outline py- py-3">
             Especialistas
           </a>
         </div>
@@ -111,15 +111,15 @@ import Layout from '../layouts/Layout.astro';
     <!-- Nuestros Servicios Section -->
     <section id="servicios" class="py-32 px-6" style="background: white;">
       <div class="container-custom">
-        <h2 class="text-4xl font-extrabold text-center mb-12 text-neutral-700">
+        <h2 class="text-4xl font-extrabold text-center mb-8 text-neutral-700">
           Nuestros Servicios
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <!-- Service 1: Evaluación neuropsicológica -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #0891B2 0%, #06b6d4 100%);">
+          <div class="rounded-lg p-8.5 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #0891B2 0%, #06b6d4 100%);">
             <h3 class="text-2xl font-bold mb-4" style="color: white;">Evaluación neuropsicológica</h3>
-            <p class="text-base leading-relaxed text-white mb-6">
+            <p class="text-base leading-relaxed text-white text-center mb-6">
               Proceso clínico especializado para identificar fortalezas y áreas de dificultad en funciones cognitivas, conductuales y emocionales.
             </p>
             <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
