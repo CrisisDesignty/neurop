@@ -48,7 +48,7 @@ if (!homepageData) {
           <div class="swiper-wrapper">
             {homepageData.data.hero.images.map((image, index) => (
               <div class="swiper-slide">
-                <img src={image} alt={`Hero Image ${index + 1}`} class="w-full h-full object-cover" />
+                <img src={image} alt={`Hero Image ${index + 1}`} class="w-full h-full object-cover object-top" />
               </div>
             ))}
           </div>
@@ -62,10 +62,10 @@ if (!homepageData) {
       <div class="container-custom relative z-10">
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
           <!--<img src="/NEU-logo3.svg" alt="Neurop" style="max-width: 280px; width: 50%; height: auto; margin: 0 auto 32px; display: block;" />-->
-          <h1 style="color: #f6f6f6; font-size: 2.8rem;">
+          <h1 style="color: #f6f6f6; font-size: 1.8rem line-height: 1;">
             {homepageData.data.hero.title}
           </h1>
-          <p style="color: #f6f6f6; font-size: 1.25rem; margin-bottom: 22px;">
+          <p style="color: #f6f6f6; line-height: 1; font-size: 1.25rem; margin-bottom: 22px;">
             {homepageData.data.hero.subtitle}
           </p>
           <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
@@ -169,7 +169,7 @@ if (!homepageData) {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {homepageData.data.services.map((service, index) => (
             <div class="rounded-lg p-10 transition-transform hover:scale-105" style={`background: linear-gradient(135deg, ${service.color} 0%, ${service.color}80 100%);`}>
-              <h3 class="text-base font-bold mb-1 text-center md:text-left" style="color: white;">{service.title}</h3>
+              <h3 class="font-bold mb-1 text-center md:text-left" style="color: white; font-size: 28px;">{service.title}</h3>
               <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
                 {service.description}
               </p>

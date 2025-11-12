@@ -8,9 +8,9 @@ hero:
   cta_primary: "Agendar Cita"
   cta_secondary: "Especialistas"
   images:
-    - "/equipo-foto-01.jpeg"
-    - "/equipo-foto-04.jpeg"
-    - "/equipo-foto-03.jpeg"
+    - "/consultorio-foto-01.webp"
+    - "/consultorio-foto-02.webp"
+    - "/equipo-foto-01.webp"
 
 about:
   title: "¿Quiénes somos?"
