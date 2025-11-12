@@ -9,7 +9,7 @@ hero:
   cta_secondary: "Especialistas"
   images:
     - "/equipo-foto-01.jpeg"
-    - "/equipo-foto-02.jpeg"
+    - "/equipo-foto-04.jpeg"
     - "/equipo-foto-03.jpeg"
 
 about:
