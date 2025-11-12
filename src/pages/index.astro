@@ -1,21 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const homepageData = await getEntry('homepage', 'index');
+
+if (!homepageData) {
+  throw new Error('No homepage content found');
+}
 ---
 
-<!-- Embla Carousel Styles -->
+<!-- Swiper Styles -->
 <style>
-  .embla {
-    overflow: hidden;
+  .hero-swiper {
+    width: 100%;
     height: 100%;
   }
-  .embla__container {
+
+  .hero-swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
     display: flex;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
   }
-  .embla__slide {
-    flex: 0 0 100%;
-    min-width: 0;
+
+  .hero-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 </style>
 
@@ -28,50 +42,45 @@ import Layout from '../layouts/Layout.astro';
     <section class="section-padding relative overflow-hidden" style="height: 80vh; display: flex; align-items: center;">
       <!-- Carousel Container -->
       <div class="absolute inset-0 z-0">
-        <div class="embla" id="hero-carousel">
-          <div class="embla__container">
-            <div class="embla__slide">
-              <img src="/equipo-foto-03.jpeg" alt="Hero Image 1" class="w-full h-full object-cover" />
-            </div>
-            <div class="embla__slide">
-              <img src="/equipo-foto-01.jpeg" alt="Equipo 1" class="w-full h-full object-cover" />
-            </div>
-            <div class="embla__slide">
-              <img src="/equipo-foto-02.jpeg" alt="Equipo 2" class="w-full h-full object-cover" />
-            </div>
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            {homepageData.data.hero.images.map((image, index) => (
+              <div class="swiper-slide">
+                <img src={image} alt={`Hero Image ${index + 1}`} class="w-full h-full object-cover" />
+              </div>
+            ))}
           </div>
         </div>
-        <!-- Overlay -->
-        <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.4);"></div>
       </div>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 z-10 pointer-events-none bg-black/40"></div>
 
       <!-- Content -->
       <div class="container-custom relative z-10">
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
           <!--<img src="/NEU-logo3.svg" alt="Neurop" style="max-width: 280px; width: 50%; height: auto; margin: 0 auto 32px; display: block;" />-->
           <h1 style="color: #f6f6f6; font-size: 3rem; margin-bottom: 24px;">
-            Bienvenido/a
+            {homepageData.data.hero.title}
           </h1>
           <p style="color: #f6f6f6; font-size: 1.25rem; margin-bottom: 32px;">
-            Centro especializado en neuropsicología dedicado a la evaluación y tratamiento
-            profesional para niños, adolescentes y adultos.
+            {homepageData.data.hero.subtitle}
           </p>
           <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
             <a href="/agendar-cita" class="btn-primary">
-              Agendar Cita
+              {homepageData.data.hero.cta_primary}
             </a>
             <a href="/especialistas" class="btn-outline">
-              Especialistas
+              {homepageData.data.hero.cta_secondary}
             </a>
           </div>
         </div>
       </div>
 
       <!-- Carousel Navigation -->
-      <div class="absolute bottom-8 left-1/2 mb-7 transform -translate-x-1/2 z-20 flex gap-5">
-        <button class="embla__prev w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" id="hero-prev"></button>
-        <button class="embla__next w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" id="hero-next"></button>
-        <button class="embla__next w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all" id="hero-next"></button>
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
+        <div class="swiper-button-prev hero-prev !w-8 !h-8 !rounded-full !bg-white !text-black after:!hidden"></div>
+        <div class="swiper-button-next hero-next !w-8 !h-8 !rounded-full !bg-white !text-black after:!hidden"></div>
       </div>
     </section>
 
@@ -83,10 +92,10 @@ import Layout from '../layouts/Layout.astro';
           <!-- Block 1: ¿Quienes somos? -->
           <div class="text-center">
             <h2 class="text-3xl font-bold text-neutral-700 mb-6">
-              ¿Quiénes somos?
+              {homepageData.data.about.title}
             </h2>
             <p class="text-lg leading-relaxed text-neutral-600">
-              Centro neurop es un espacio clínico dedicado al apoyo diagnóstico y la intervención neuropsicológica.
+              {homepageData.data.about.description}
             </p>
           </div>
 
@@ -178,9 +187,6 @@ import Layout from '../layouts/Layout.astro';
             <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">Evaluación de lenguaje</h3>
             <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
               Valoración integral de la comprensión, expresión y uso funcional del lenguaje oral y no verbal.
-    <script>
-      import '../scripts/hero-carousel.ts';
-    </script>
             </p>
             <div class="text-center">
               <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
@@ -351,6 +357,10 @@ import Layout from '../layouts/Layout.astro';
 
     <script>
       import '../scripts/faq.ts';
+    </script>
+
+    <script>
+      import '../scripts/hero-carousel.ts';
     </script>
   </main>
 </Layout>

@@ -1,34 +1,32 @@
-import EmblaCarousel from 'embla-carousel';
-import Autoplay from 'embla-carousel-autoplay';
+import Swiper from 'swiper';
+import { Navigation, Autoplay } from 'swiper/modules';
 
-window.addEventListener('load', () => {
-  console.log('Hero carousel script loaded');
-  const emblaNode = document.getElementById('hero-carousel');
-  const prevBtn = document.getElementById('hero-prev');
-  const nextBtn = document.getElementById('hero-next');
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-  console.log('Embla node:', emblaNode);
-  if (!emblaNode) return;
+document.addEventListener('DOMContentLoaded', () => {
+  // Wait a bit for images to load
+  setTimeout(() => {
+    const swiperContainer = document.querySelector('.hero-swiper');
 
-  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false });
+    if (!swiperContainer) {
+      return;
+    }
 
-  const embla = EmblaCarousel(emblaNode, {
-    loop: true,
-    duration: 30,
-    watchDrag: true
-  }, [autoplay]);
-
-  console.log('Embla initialized:', embla);
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      embla.scrollPrev();
+    const swiper = new Swiper('.hero-swiper', {
+      modules: [Navigation, Autoplay],
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.hero-next',
+        prevEl: '.hero-prev',
+      },
+      speed: 600,
+      grabCursor: true,
     });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      embla.scrollNext();
-    });
-  }
+  }, 500);
 });
