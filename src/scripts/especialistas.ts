@@ -6,6 +6,41 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownItems = document.querySelectorAll('.dropdown-item');
   const specialistCards = document.querySelectorAll('.specialist-card');
 
+  // Function to apply filter
+  const applyFilter = (filter: string) => {
+    // Find the corresponding dropdown item and get its text
+    const targetItem = Array.from(dropdownItems).find(item =>
+      item.getAttribute('data-filter') === filter
+    );
+
+    const itemText = targetItem?.textContent?.trim() || 'Seleccionar Área';
+
+    // Update selected text
+    if (selectedAreaText) {
+      selectedAreaText.textContent = itemText;
+    }
+
+    // Filter cards
+    specialistCards.forEach(card => {
+      const areas = card.getAttribute('data-areas');
+
+      if (filter === 'all' || (areas && filter && areas.includes(filter))) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  };
+
+  // Check for filter parameter in URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterParam = urlParams.get('filter');
+
+  if (filterParam) {
+    // Apply the filter from URL parameter
+    applyFilter(filterParam);
+  }
+
   // Toggle dropdown
   dropdownButton?.addEventListener('click', () => {
     const isHidden = dropdownMenu?.classList.contains('hidden');
@@ -38,11 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
   dropdownItems.forEach(item => {
     item.addEventListener('click', () => {
       const filter = item.getAttribute('data-filter');
-      const itemText = item.textContent?.trim() || 'Seleccionar Área';
 
-      // Update selected text
-      if (selectedAreaText) {
-        selectedAreaText.textContent = itemText;
+      if (filter) {
+        applyFilter(filter);
       }
 
       // Close dropdown
@@ -50,17 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (dropdownIcon) {
         (dropdownIcon as HTMLElement).style.transform = 'rotate(0deg)';
       }
-
-      // Filter cards
-      specialistCards.forEach(card => {
-        const areas = card.getAttribute('data-areas');
-
-        if (filter === 'all' || (areas && filter && areas.includes(filter))) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
     });
   });
 });

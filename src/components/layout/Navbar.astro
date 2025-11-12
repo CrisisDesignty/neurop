@@ -1,4 +1,6 @@
 ---
+import WhatsAppButton from "../ui/WhatsAppButton.astro";
+
 // Navbar component with sticky positioning and responsive hamburger menu
 ---
 
@@ -20,7 +22,7 @@
 
 			<!-- Contacto Button (Desktop) -->
 			<div class="navbar-cta">
-				<a href="/contacto" class="contacto-btn"> Contacto </a>
+				<WhatsAppButton text="Contacto" className="contacto-btn" />
 			</div>
 
 			<!-- Hamburger Menu Button (Mobile) -->
@@ -43,9 +45,7 @@
 				<a href="/#servicios" class="mobile-nav-link">Servicios</a>
 				<a href="/especialistas" class="mobile-nav-link">Especialistas</a>
 				<a href="/#preguntas" class="mobile-nav-link">FAQ</a>
-				<a href="/contacto" class="contacto-btn mobile-contacto-btn">
-					Contacto
-				</a>
+				<WhatsAppButton text="Contacto" className="contacto-btn mobile-contacto-btn" />
 			</div>
 		</div>
 	</div>

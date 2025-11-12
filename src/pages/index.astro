@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getEntry } from 'astro:content';
+import WhatsAppButton from '../components/ui/WhatsAppButton.astro';
+import EspecialistasButton from '../components/ui/EspecialistasButton.astro';
 
 const homepageData = await getEntry('homepage', 'index');
 
@@ -67,12 +69,8 @@ if (!homepageData) {
             {homepageData.data.hero.subtitle}
           </p>
           <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <a href="/agendar-cita" class="btn-primary">
-              {homepageData.data.hero.cta_primary}
-            </a>
-            <a href="/especialistas" class="btn-outline">
-              {homepageData.data.hero.cta_secondary}
-            </a>
+            <WhatsAppButton text={homepageData.data.hero.cta_primary} />
+            <EspecialistasButton variant="white" text={homepageData.data.hero.cta_secondary} />
           </div>
         </div>
       </div>
@@ -169,83 +167,19 @@ if (!homepageData) {
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <!-- Service 1: Evaluación neuropsicológica -->
-          <div class="rounded-lg p-8.5 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #0891B2 0%, #06b6d4 100%);">
-            <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">Evaluación neuropsicológica</h3>
-            <p class="text-base leading-relaxed text-white text-center mb-6">
-              Proceso clínico especializado para identificar fortalezas y áreas de dificultad en funciones cognitivas, conductuales y emocionales.
-            </p>
-            <div class="text-center">
-              <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
-                Ver más →
-              </button>
+          {homepageData.data.services.map((service, index) => (
+            <div class="rounded-lg p-10 transition-transform hover:scale-105" style={`background: linear-gradient(135deg, ${service.color} 0%, ${service.color}80 100%);`}>
+              <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">{service.title}</h3>
+              <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
+                {service.description}
+              </p>
+              <div class="text-center">
+                <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white" data-service-filter={service.filter}>
+                  Ver más →
+                </button>
+              </div>
             </div>
-          </div>
-
-          <!-- Service 2: Evaluación de lenguaje -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #65A30D 0%, #84cc16 100%);">
-            <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">Evaluación de lenguaje</h3>
-            <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
-              Valoración integral de la comprensión, expresión y uso funcional del lenguaje oral y no verbal.
-            </p>
-            <div class="text-center">
-              <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
-                Ver más →
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 3: Terapia de comunicación, habla y lenguaje -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #7C3AED 0%, #a78bfa 100%);">
-            <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">Terapia de comunicación, habla y lenguaje</h3>
-            <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
-              Intervención dirigida al desarrollo y fortalecimiento de habilidades comunicativas, incluyendo Comunicación Aumentativa y Alternativa (CAA).
-            </p>
-            <div class="text-center">
-              <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
-                Ver más →
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 4: Terapia de aprendizaje -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #D97706 0%, #fbbf24 100%);">
-            <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">Terapia de aprendizaje</h3>
-            <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
-              Espacio terapéutico centrado en la mejora de procesos cognitivos y académicos asociados a lectura, escritura y matemáticas.
-            </p>
-            <div class="text-center">
-              <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
-                Ver más →
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 5: Terapia emocional -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #DB2777 0%, #f472b6 100%);">
-            <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">Terapia emocional</h3>
-            <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
-              Atención psicológica enfocada en el manejo de emociones, regulación conductual y desarrollo de recursos personales.
-            </p>
-            <div class="text-center">
-              <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
-                Ver más →
-              </button>
-            </div>
-          </div>
-
-          <!-- Service 6: Formación y asesoría especializada -->
-          <div class="rounded-lg p-10 transition-transform hover:scale-105" style="background: linear-gradient(135deg, #059669 0%, #34d399 100%);">
-            <h3 class="text-2xl font-bold mb-4 text-center md:text-left" style="color: white;">Formación y asesoría especializada</h3>
-            <p class="text-base leading-relaxed text-white mb-6 text-center md:text-left">
-              Ofrecemos pláticas, cursos y asesoría a equipos escolares y terapéuticos sobre detección y estrategias de intervención.
-            </p>
-            <div class="text-center">
-              <button class="service-more-btn font-semibold mt-4 inline-block hover:underline cursor-pointer text-white">
-                Ver más →
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

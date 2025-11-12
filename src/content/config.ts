@@ -46,6 +46,7 @@ const homepageCollection = defineCollection({
       title: z.string(),
       description: z.string(),
       color: z.string(),
+      filter: z.string(),
     })),
     faq: z.array(z.object({
       question: z.string(),

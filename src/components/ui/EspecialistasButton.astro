@@ -1,0 +1,26 @@
+---
+interface Props {
+  variant?: "dark" | "white";
+  text?: string;
+  className?: string;
+}
+
+const {
+  variant = "white",
+  text = "Especialistas",
+  className = ""
+} = Astro.props;
+
+const baseClasses = "inline-block px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105";
+const darkClasses = "bg-neutral-700 text-white border-2 border-neutral-600 hover:bg-neutral-800 hover:border-neutral-700";
+const whiteClasses = "bg-white text-neutral-700 border-2 border-neutral-300 hover:bg-neutral-100 hover:border-neutral-400";
+
+const variantClasses = variant === "dark" ? darkClasses : whiteClasses;
+---
+
+<a
+  href="/especialistas"
+  class={`${baseClasses} ${variantClasses} ${className}`}
+>
+  {text}
+</a>
