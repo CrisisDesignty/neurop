@@ -1,9 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const especialistasData = await getCollection('especialistas');
+
+if (!especialistasData || especialistasData.length === 0) {
+  throw new Error('No especialistas content found');
+}
+
+const pageData = especialistasData[0];
 ---
 
-<Layout 
-  title="Nuestros Especialistas - Neurop" 
+<Layout
+  title="Nuestros Especialistas - Neurop"
   description="Conoce a nuestro equipo de especialistas en neuropsicología. Profesionales certificados dedicados a tu bienestar."
 >
   <main>
@@ -11,12 +20,12 @@ import Layout from '../layouts/Layout.astro';
       <div class="container-custom">
         <!-- Heading -->
         <h1 class="text-4xl font-extrabold text-center mb-8 text-neutral-700">
-          Especialistas
+          {pageData.data.title}
         </h1>
-        
+
         <!-- Intro Paragraph -->
         <p class="text-center text-lg text-neutral-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-          Todas nuestras evaluaciones son realizadas por neuropsicólogas especialistas certificadas en los instrumentos internacionales de referencia para el diagnóstico y nuestras intervenciones se diseñan a partir de evidencia científica actualizada.
+          {pageData.data.description}
         </p>
 
         <!-- Dropdown Filter -->
@@ -60,217 +69,44 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Specialists Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="specialists-grid">
-          
-          <!-- Specialist 1: Mtra. Berenice Orduño Bennett -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="evaluacion-neuropsicologica">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
+          {pageData.data.especialistas.map((especialista) => (
+            <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas={especialista.areas.join(' ')}>
+              <div class="rounded-lg mb-4 overflow-hidden" style="height: 200px;">
+                <img src={especialista.photo} alt={`Foto de ${especialista.name}`} class="w-full h-full object-cover" />
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-neutral-700">{especialista.name}</h3>
+              <p class="text-sm text-neutral-600 mb-3">{especialista.title}</p>
+              <div class="mb-3 flex flex-wrap gap-2">
+                {especialista.areas.map((area) => {
+                  const getAreaInfo = (areaKey: string) => {
+                    const labels: { [key: string]: { label: string; color: string } } = {
+                      'evaluacion-neuropsicologica': { label: 'Evaluación neuropsicológica', color: '#0891B2' },
+                      'evaluacion-lenguaje': { label: 'Evaluación de lenguaje', color: '#65A30D' },
+                      'terapia-comunicacion': { label: 'Terapia de comunicación', color: '#7C3AED' },
+                      'terapia-aprendizaje': { label: 'Terapia de aprendizaje', color: '#D97706' },
+                      'terapia-emocional': { label: 'Terapia emocional', color: '#DB2777' }
+                    };
+                    return labels[areaKey] || { label: areaKey, color: '#6B7280' };
+                  };
+                  const areaInfo = getAreaInfo(area);
+                  return (
+                    <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style={`background-color: ${areaInfo.color};`}>
+                      {areaInfo.label}
+                    </span>
+                  );
+                })}
+              </div>
+              <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> {especialista.cedula}</p>
+              <div class="text-sm text-neutral-600">
+                <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
+                <ul class="list-disc list-inside space-y-1">
+                  {especialista.certificaciones.map((cert) => (
+                    <li>{cert}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Mtra. Berenice Orduño Bennett</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Psicología | Mtra. Neuropsicología</p>
-            <div class="mb-3">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #0891B2;">
-                Evaluación neuropsicológica
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 12345678</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Certificación en evaluación neuropsicológica infantil</li>
-                <li>Diplomado en trastornos del neurodesarrollo</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 2: Mtra. Karla Apodaca -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="evaluacion-neuropsicologica">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Mtra. Karla Apodaca</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Psicología | Mtra. Neuropsicología</p>
-            <div class="mb-3">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #0891B2;">
-                Evaluación neuropsicológica
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 23456789</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Certificación en evaluación neuropsicológica</li>
-                <li>Diplomado en neuropsicología clínica</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 3: Mtra. Alexia Díaz -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="evaluacion-neuropsicologica">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Mtra. Alexia Díaz</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Psicología | Mtra. Neuropsicología</p>
-            <div class="mb-3">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #0891B2;">
-                Evaluación neuropsicológica
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 34567890</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Certificación en evaluación neuropsicológica</li>
-                <li>Diplomado en atención temprana</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 4: Dra. Natalia Nieblas -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="evaluacion-lenguaje terapia-comunicacion">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Dra. Natalia Nieblas</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Comunicación Humana | Dra. Ciencias del Lenguaje</p>
-            <div class="mb-3 flex flex-wrap gap-2">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #65A30D;">
-                Evaluación de lenguaje
-              </span>
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #7C3AED;">
-                Terapia de comunicación
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 45678901</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Doctorado en Ciencias del Lenguaje</li>
-                <li>Certificación en terapia de lenguaje</li>
-                <li>Especialización en CAA</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 5: Mtra. Frida Salud -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="evaluacion-lenguaje terapia-comunicacion">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Mtra. Frida Salud</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Comunicación Humana | Mtra. Terapia de Lenguaje</p>
-            <div class="mb-3 flex flex-wrap gap-2">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #65A30D;">
-                Evaluación de lenguaje
-              </span>
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #7C3AED;">
-                Terapia de comunicación
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 56789012</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Maestría en Terapia de Lenguaje</li>
-                <li>Certificación en evaluación del lenguaje</li>
-                <li>Diplomado en trastornos del habla</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 6: Mtra. Carmen Lucía Camou -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="terapia-aprendizaje">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Mtra. Carmen Lucía Camou</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Psicología | Mtra. Psicopedagogía</p>
-            <div class="mb-3">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #D97706;">
-                Terapia de aprendizaje
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 67890123</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Maestría en Psicopedagogía</li>
-                <li>Certificación en dificultades de aprendizaje</li>
-                <li>Diplomado en dislexia y discalculia</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 7: Lic. Yuliana Trujillo -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="terapia-emocional">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Lic. Yuliana Trujillo</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Psicología Clínica</p>
-            <div class="mb-3">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #DB2777;">
-                Terapia emocional
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 78901234</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Certificación en terapia cognitivo-conductual</li>
-                <li>Diplomado en psicología infantil</li>
-                <li>Especialización en manejo de ansiedad</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 8: Lic. Pilar Celaya -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="terapia-emocional">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Lic. Pilar Celaya</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Psicología Clínica</p>
-            <div class="mb-3">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #DB2777;">
-                Terapia emocional
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 89012345</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Certificación en terapia humanista</li>
-                <li>Diplomado en terapia familiar</li>
-                <li>Especialización en adolescentes</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Specialist 9: Lic. Loredana Mardueño -->
-          <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6" data-areas="terapia-emocional">
-            <div class="bg-gray-200 rounded-lg mb-4 flex items-center justify-center" style="height: 200px;">
-              <span class="text-gray-400 text-sm">Foto profesional</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2 text-neutral-700">Lic. Loredana Mardueño</h3>
-            <p class="text-sm text-neutral-600 mb-3">Lic. Psicología Clínica</p>
-            <div class="mb-3">
-              <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold text-white" style="background-color: #DB2777;">
-                Terapia emocional
-              </span>
-            </div>
-            <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> 90123456</p>
-            <div class="text-sm text-neutral-600">
-              <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-              <ul class="list-disc list-inside space-y-1">
-                <li>Certificación en terapia sistémica</li>
-                <li>Diplomado en duelo y pérdida</li>
-                <li>Especialización en autoestima</li>
-              </ul>
-            </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>
