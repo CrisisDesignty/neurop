@@ -41,15 +41,13 @@ especialistas:
 
   - id: "natalia-nieblas"
     name: "Dra. Natalia Nieblas"
-    title: "Science in Speech, Language and Hearing Sciences | Mtra. y Dra. Psicología"
+    title: "Science in Speech, Language and Hearing Sciences (Universidad de Arizona) | Mtra. y Dra. Psicología"
     areas: ["evaluacion-lenguaje", "terapia-comunicacion"]
     cedula:
       - "Doctorado: 15225383"
       - "Maestría: 13189496"
     photo: "equipo-foto-04.webp"
-    certificaciones:
-      - "Doctorado en Psicología"
-      - "Especialización en CAA (Comunicación Aumentativa y Alternativa)"
+    certificaciones: []
 
   - id: "frida-salud"
     name: "Mtra. Frida Salud"
