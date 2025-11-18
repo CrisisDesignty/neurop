@@ -1,13 +1,15 @@
 ---
-title: "Nuestros Especialistas"
-description: "Conoce a nuestro equipo de especialistas en neuropsicología. Profesionales certificados dedicados a tu bienestar."
+title: "Nuestras Especialistas"
+description: "Conoce a nuestro equipo de especialistas en neuropsicología. Profesionales certificadas dedicadas a tu bienestar."
 
 especialistas:
   - id: "berenice-orduno"
     name: "Mtra. Berenice Orduño Bennett"
     title: "Lic. Psicología | Mtra. Neuropsicología"
     areas: ["evaluacion-neuropsicologica"]
-    cedula: "12345678"
+    cedula:
+      - "Prof. Psic: 11566505"
+      - "Prof. Nps: 12669040"
     photo: "equipo-foto-01.webp"
     certificaciones:
       - "Certificación en evaluación neuropsicológica infantil"
@@ -17,7 +19,9 @@ especialistas:
     name: "Mtra. Karla Apodaca"
     title: "Lic. Psicología | Mtra. Neuropsicología"
     areas: ["evaluacion-neuropsicologica"]
-    cedula: "23456789"
+    cedula:
+      - "Prof. Psic: 12200916"
+      - "Prof. Nps: 13366095"
     photo: "equipo-foto-02.webp"
     certificaciones:
       - "Certificación en evaluación neuropsicológica"
@@ -27,7 +31,8 @@ especialistas:
     name: "Mtra. Alexia Díaz"
     title: "Lic. Psicología | Mtra. Neuropsicología"
     areas: ["evaluacion-neuropsicologica"]
-    cedula: "34567890"
+    cedula:
+      - "Prof. Psic: 13360126"
     photo: "equipo-foto-03.webp"
     certificaciones:
       - "Certificación en evaluación neuropsicológica"
@@ -37,7 +42,9 @@ especialistas:
     name: "Dra. Natalia Nieblas"
     title: "Lic. Comunicación Humana | Dra. Ciencias del Lenguaje"
     areas: ["evaluacion-lenguaje", "terapia-comunicacion"]
-    cedula: "45678901"
+    cedula:
+      - "Doctorado: 15225383"
+      - "Maestría: 13189496"
     photo: "equipo-foto-04.webp"
     certificaciones:
       - "Doctorado en Ciencias del Lenguaje"
@@ -48,7 +55,8 @@ especialistas:
     name: "Mtra. Frida Salud"
     title: "Lic. Comunicación Humana | Mtra. Terapia de Lenguaje"
     areas: ["evaluacion-lenguaje", "terapia-comunicacion"]
-    cedula: "56789012"
+    cedula:
+      - "Cédula estatal: 15078406"
     photo: "equipo-foto-05.webp"
     certificaciones:
       - "Maestría en Terapia de Lenguaje"
@@ -59,7 +67,8 @@ especialistas:
     name: "Lic. Pilar Celaya"
     title: "Lic. Psicología Clínica"
     areas: ["terapia-aprendizaje"]
-    cedula: "89012345"
+    cedula:
+      - "Cédula estatal: 069608"
     photo: "equipo-foto-06.webp"
     certificaciones:
       - "Certificación en terapia humanista"
@@ -70,7 +79,8 @@ especialistas:
     name: "Lic. Yuliana Trujillo"
     title: "Lic. Psicología Clínica"
     areas: ["terapia-emocional"]
-    cedula: "78901234"
+    cedula:
+      - "Cédula estatal: 077522"
     photo: "equipo-foto-07.webp"
     certificaciones:
       - "Certificación en terapia cognitivo-conductual"
@@ -81,7 +91,8 @@ especialistas:
     name: "Lic. Loredana Mardueño"
     title: "Lic. Psicología Clínica"
     areas: ["terapia-emocional"]
-    cedula: "90123456"
+    cedula:
+      - "Cedula estatal: 069614"
     photo: "equipo-foto-08.webp"
     certificaciones:
       - "Certificación en terapia sistémica"
@@ -92,7 +103,8 @@ especialistas:
     name: "Mtra. Carmen Lucía Camou"
     areas: ["terapia-emocional"]
     title: "Lic. Psicología | Mtra. Psicopedagogía"
-    cedula: "67890123"
+    cedula:
+      - "Cedula estatal: 082742"
     photo: "equipo-foto-09.webp"
     certificaciones:
       - "Maestría en Psicopedagogía"

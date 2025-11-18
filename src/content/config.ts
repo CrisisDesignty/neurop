@@ -10,7 +10,7 @@ const especialistasCollection = defineCollection({
       name: z.string(),
       title: z.string(),
       areas: z.array(z.string()),
-      cedula: z.string(),
+      cedula: z.array(z.string()),
       certificaciones: z.array(z.string()),
       photo: z.string(),
     })),

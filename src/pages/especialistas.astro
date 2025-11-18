@@ -130,7 +130,12 @@ const imageMap: { [key: string]: ImageMetadata } = {
                   );
                 })}
               </div>
-              <p class="text-sm text-neutral-600 mb-3"><strong>Cédula profesional:</strong> {especialista.cedula}</p>
+              <div class="text-sm text-neutral-600 mb-3">
+                <strong>Cédula profesional:</strong>
+                {especialista.cedula.map((cedula) => (
+                  <div>{cedula}</div>
+                ))}
+              </div>
               <div class="text-sm text-neutral-600 flex-grow">
                 <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
                 <ul class="list-disc list-inside space-y-1">
