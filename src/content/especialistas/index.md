@@ -12,8 +12,10 @@ especialistas:
       - "Prof. Nps: 12669040"
     photo: "equipo-foto-01.webp"
     certificaciones:
-      - "Certificación en evaluación neuropsicológica infantil"
-      - "Diplomado en trastornos del neurodesarrollo"
+      - "Cursa Doctorado en Psicología (Tesis en diferencias de género en autismo)"
+      - "Acreditación oficial en ADOS-2"
+      - "Acreditación oficial en ADI-R"
+      - "Diplomado en Terapia Cognitivo-Conductual"
 
   - id: "karla-apodaca"
     name: "Mtra. Karla Apodaca"
@@ -24,8 +26,8 @@ especialistas:
       - "Prof. Nps: 13366095"
     photo: "equipo-foto-02.webp"
     certificaciones:
-      - "Certificación en evaluación neuropsicológica"
-      - "Diplomado en neuropsicología clínica"
+      - "Acreditación oficial en ADOS-2"
+      - "Acreditación oficial en ADI-R"
 
   - id: "alexia-diaz"
     name: "Mtra. Alexia Díaz"
@@ -35,81 +37,66 @@ especialistas:
       - "Prof. Psic: 13360126"
     photo: "equipo-foto-03.webp"
     certificaciones:
-      - "Certificación en evaluación neuropsicológica"
-      - "Diplomado en atención temprana"
+      - "Acreditación oficial en ADOS-2"
 
   - id: "natalia-nieblas"
     name: "Dra. Natalia Nieblas"
-    title: "Lic. Comunicación Humana | Dra. Ciencias del Lenguaje"
+    title: "Science in Speech, Language and Hearing Sciences | Mtra. y Dra. Psicología"
     areas: ["evaluacion-lenguaje", "terapia-comunicacion"]
     cedula:
       - "Doctorado: 15225383"
       - "Maestría: 13189496"
     photo: "equipo-foto-04.webp"
     certificaciones:
-      - "Doctorado en Ciencias del Lenguaje"
-      - "Certificación en terapia de lenguaje"
-      - "Especialización en CAA"
+      - "Doctorado en Psicología"
+      - "Especialización en CAA (Comunicación Aumentativa y Alternativa)"
 
   - id: "frida-salud"
     name: "Mtra. Frida Salud"
-    title: "Lic. Comunicación Humana | Mtra. Terapia de Lenguaje"
+    title: "Lic. Psicopedagogía | Mtra. Neuropsicología"
     areas: ["evaluacion-lenguaje", "terapia-comunicacion"]
     cedula:
       - "Cédula estatal: 15078406"
     photo: "equipo-foto-05.webp"
-    certificaciones:
-      - "Maestría en Terapia de Lenguaje"
-      - "Certificación en evaluación del lenguaje"
-      - "Diplomado en trastornos del habla"
+    certificaciones: []
 
   - id: "pilar-celaya"
     name: "Lic. Pilar Celaya"
-    title: "Lic. Psicología Clínica"
-    areas: ["terapia-aprendizaje"]
+    title: "Lic. Psicología"
+    areas: ["terapia-emocional"]
     cedula:
       - "Cédula estatal: 069608"
     photo: "equipo-foto-06.webp"
     certificaciones:
-      - "Certificación en terapia humanista"
-      - "Diplomado en terapia familiar"
-      - "Especialización en adolescentes"
+      - "Diplomado en Terapia Cognitivo-Conductual"
 
   - id: "yuliana-trujillo"
     name: "Lic. Yuliana Trujillo"
-    title: "Lic. Psicología Clínica"
+    title: "Lic. Psicología"
     areas: ["terapia-emocional"]
     cedula:
       - "Cédula estatal: 077522"
     photo: "equipo-foto-07.webp"
     certificaciones:
-      - "Certificación en terapia cognitivo-conductual"
-      - "Diplomado en psicología infantil"
-      - "Especialización en manejo de ansiedad"
+      - "Diplomado en Terapia Cognitivo-Conductual"
 
   - id: "loredana-mardueno"
     name: "Lic. Loredana Mardueño"
-    title: "Lic. Psicología Clínica"
+    title: "Lic. Psicología"
     areas: ["terapia-emocional"]
     cedula:
       - "Cedula estatal: 069614"
     photo: "equipo-foto-08.webp"
-    certificaciones:
-      - "Certificación en terapia sistémica"
-      - "Diplomado en duelo y pérdida"
-      - "Especialización en autoestima"
+    certificaciones: []
 
   - id: "carmen-lucia-camou"
     name: "Mtra. Carmen Lucía Camou"
-    areas: ["terapia-emocional"]
-    title: "Lic. Psicología | Mtra. Psicopedagogía"
+    areas: ["terapia-aprendizaje"]
+    title: "Lic. Psicología | Mtra. en Intervención en Dificultades del Aprendizaje"
     cedula:
       - "Cedula estatal: 082742"
     photo: "equipo-foto-09.webp"
-    certificaciones:
-      - "Maestría en Psicopedagogía"
-      - "Certificación en dificultades de aprendizaje"
-      - "Diplomado en dislexia y discalculia"
+    certificaciones: []
 
 ---
 
