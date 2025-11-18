@@ -1,7 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import WhatsAppButton from '../components/ui/WhatsAppButton.astro';
+
+// Import specialist images
+import equipoFoto01 from '../assets/equipo-foto-01.webp';
+import equipoFoto02 from '../assets/equipo-foto-02.webp';
+import equipoFoto03 from '../assets/equipo-foto-03.webp';
+import equipoFoto04 from '../assets/equipo-foto-04.webp';
+import equipoFoto05 from '../assets/equipo-foto-05.webp';
+import equipoFoto06 from '../assets/equipo-foto-06.webp';
+import equipoFoto07 from '../assets/equipo-foto-07.webp';
+import equipoFoto08 from '../assets/equipo-foto-08.webp';
+import equipoFoto09 from '../assets/equipo-foto-09.webp';
 
 const especialistasData = await getCollection('especialistas');
 
@@ -10,6 +22,19 @@ if (!especialistasData || especialistasData.length === 0) {
 }
 
 const pageData = especialistasData[0];
+
+// Map image strings to imported images
+const imageMap: { [key: string]: ImageMetadata } = {
+  'equipo-foto-01.webp': equipoFoto01,
+  'equipo-foto-02.webp': equipoFoto02,
+  'equipo-foto-03.webp': equipoFoto03,
+  'equipo-foto-04.webp': equipoFoto04,
+  'equipo-foto-05.webp': equipoFoto05,
+  'equipo-foto-06.webp': equipoFoto06,
+  'equipo-foto-07.webp': equipoFoto07,
+  'equipo-foto-08.webp': equipoFoto08,
+  'equipo-foto-09.webp': equipoFoto09,
+};
 ---
 
 <Layout
@@ -73,7 +98,15 @@ const pageData = especialistasData[0];
           {pageData.data.especialistas.map((especialista) => (
             <div class="specialist-card hidden bg-white rounded-lg shadow-lg p-6 flex flex-col h-full" data-areas={especialista.areas.join(' ')}>
               <div class="rounded-lg mb-4 overflow-hidden" style="height: 200px;">
-                <img src={especialista.photo} alt={`Foto de ${especialista.name}`} class="w-full h-full object-cover" />
+                <Image
+                  src={imageMap[especialista.photo] || especialista.photo}
+                  alt={`Foto de ${especialista.name}`}
+                  class="w-full h-full object-cover"
+                  width={300}
+                  height={200}
+                  format="webp"
+                  quality={85}
+                />
               </div>
               <h3 class="text-xl font-bold mb-2 text-neutral-700">{especialista.name}</h3>
               <p class="text-sm text-neutral-600 mb-3">{especialista.title}</p>

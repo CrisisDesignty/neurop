@@ -8,7 +8,7 @@ especialistas:
     title: "Lic. Psicología | Mtra. Neuropsicología"
     areas: ["evaluacion-neuropsicologica"]
     cedula: "12345678"
-    photo: "/equipo-foto-01.webp"
+    photo: "equipo-foto-01.webp"
     certificaciones:
       - "Certificación en evaluación neuropsicológica infantil"
       - "Diplomado en trastornos del neurodesarrollo"
@@ -18,7 +18,7 @@ especialistas:
     title: "Lic. Psicología | Mtra. Neuropsicología"
     areas: ["evaluacion-neuropsicologica"]
     cedula: "23456789"
-    photo: "/equipo-foto-02.webp"
+    photo: "equipo-foto-02.webp"
     certificaciones:
       - "Certificación en evaluación neuropsicológica"
       - "Diplomado en neuropsicología clínica"
@@ -28,7 +28,7 @@ especialistas:
     title: "Lic. Psicología | Mtra. Neuropsicología"
     areas: ["evaluacion-neuropsicologica"]
     cedula: "34567890"
-    photo: "/equipo-foto-03.webp"
+    photo: "equipo-foto-03.webp"
     certificaciones:
       - "Certificación en evaluación neuropsicológica"
       - "Diplomado en atención temprana"
@@ -38,7 +38,7 @@ especialistas:
     title: "Lic. Comunicación Humana | Dra. Ciencias del Lenguaje"
     areas: ["evaluacion-lenguaje", "terapia-comunicacion"]
     cedula: "45678901"
-    photo: "/equipo-foto-04.webp"
+    photo: "equipo-foto-04.webp"
     certificaciones:
       - "Doctorado en Ciencias del Lenguaje"
       - "Certificación en terapia de lenguaje"
@@ -49,7 +49,7 @@ especialistas:
     title: "Lic. Comunicación Humana | Mtra. Terapia de Lenguaje"
     areas: ["evaluacion-lenguaje", "terapia-comunicacion"]
     cedula: "56789012"
-    photo: "/equipo-foto-05.webp"
+    photo: "equipo-foto-05.webp"
     certificaciones:
       - "Maestría en Terapia de Lenguaje"
       - "Certificación en evaluación del lenguaje"
@@ -60,7 +60,7 @@ especialistas:
     title: "Lic. Psicología Clínica"
     areas: ["terapia-aprendizaje"]
     cedula: "89012345"
-    photo: "/equipo-foto-06.webp"
+    photo: "equipo-foto-06.webp"
     certificaciones:
       - "Certificación en terapia humanista"
       - "Diplomado en terapia familiar"
@@ -71,7 +71,7 @@ especialistas:
     title: "Lic. Psicología Clínica"
     areas: ["terapia-emocional"]
     cedula: "78901234"
-    photo: "/equipo-foto-07.webp"
+    photo: "equipo-foto-07.webp"
     certificaciones:
       - "Certificación en terapia cognitivo-conductual"
       - "Diplomado en psicología infantil"
@@ -82,7 +82,7 @@ especialistas:
     title: "Lic. Psicología Clínica"
     areas: ["terapia-emocional"]
     cedula: "90123456"
-    photo: "/equipo-foto-08.webp"
+    photo: "equipo-foto-08.webp"
     certificaciones:
       - "Certificación en terapia sistémica"
       - "Diplomado en duelo y pérdida"
@@ -93,7 +93,7 @@ especialistas:
     areas: ["terapia-emocional"]
     title: "Lic. Psicología | Mtra. Psicopedagogía"
     cedula: "67890123"
-    photo: "/equipo-foto-09.webp"
+    photo: "equipo-foto-09.webp"
     certificaciones:
       - "Maestría en Psicopedagogía"
       - "Certificación en dificultades de aprendizaje"

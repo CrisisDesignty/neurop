@@ -3,14 +3,14 @@ title: "Neurop - Centro de Neuropsicología"
 description: "Centro especializado en neuropsicología. Evaluación y tratamiento profesional para niños, adolescentes y adultos en Hermosillo, Sonora."
 
 hero:
-  title: "Bienvenido/a"
-  subtitle: "Centro especializado en neuropsicología dedicado a la evaluación y tratamiento profesional para niños, adolescentes y adultos."
+  title: "Centro neurop"
+  subtitle: "Brindamos evaluación, diagnóstico e intervención en diversas condiciones del neurodesarrollo y de la salud mental."
   cta_primary: "Agendar Cita"
   cta_secondary: "Especialistas"
   images:
-    - "/consultorio-foto-01.webp"
-    - "/consultorio-foto-02.webp"
-    - "/equipo-foto-01.webp"
+    - "consultorio-foto-01.webp"
+    - "consultorio-foto-02.webp"
+    - "equipo-foto-01.webp"
 
 about:
   title: "¿Quiénes somos?"
@@ -55,17 +55,17 @@ services:
 
 faq:
   - question: "¿Qué es una evaluación neuropsicológica?"
-    answer: "Una evaluación neuropsicológica es un proceso clínico especializado que permite identificar el perfil de fortalezas y debilidades en el funcionamiento cognitivo, emocional y conductual de una persona. A través de entrevistas, observación clínica y la aplicación de pruebas estandarizadas, se obtiene información detallada sobre áreas como la atención, memoria, lenguaje, funciones ejecutivas, habilidades visoespaciales y regulación emocional."
+    answer: "Es un proceso clínico que permite conocer cómo funciona el cerebro en áreas como atención, memoria, lenguaje, pensamiento, aprendizaje y regulación emocional. Ayuda a identificar fortalezas, dificultades y posibles cuadros diagnósticos."
   - question: "¿Quién puede realizar una evaluación neuropsicológica?"
-    answer: "Las evaluaciones neuropsicológicas deben ser realizadas por neuropsicólogos certificados, profesionales especializados con formación avanzada en neuropsicología clínica. En nuestro centro, todas las evaluaciones son realizadas por neuropsicólogas especialistas certificadas en los instrumentos internacionales de referencia para el diagnóstico."
+    answer: "Debe ser llevada a cabo por un neuropsicólogo especialista, con formación de posgrado, entrenamiento y acreditación en pruebas estandarizadas."
   - question: "¿En qué consiste una evaluación neuropsicológica?"
-    answer: "La evaluación consiste en varias sesiones que incluyen: entrevista inicial con el paciente y/o familia, aplicación de pruebas estandarizadas específicas según la edad y motivo de consulta, observación clínica del comportamiento, análisis e integración de resultados, y elaboración de un informe detallado con recomendaciones personalizadas. El proceso puede tomar entre 2 y 4 sesiones dependiendo de cada caso."
+    answer: "Incluye entrevista clínica, aplicación de pruebas, análisis de resultados y entrega de un informe detallado con orientación terapéutica." 
   - question: "¿Qué diagnostican?"
-    answer: "Las evaluaciones neuropsicológicas permiten diagnosticar trastornos del neurodesarrollo (TDAH, TEA, trastornos del aprendizaje), deterioro cognitivo, secuelas de daño cerebral, trastornos del lenguaje, dificultades de aprendizaje, y condiciones emocionales que afectan el funcionamiento cognitivo. Los resultados orientan la toma de decisiones clínicas, educativas y fundamentan el diseño de intervenciones personalizadas."
+    answer: "Trastornos del neurodesarrollo (como autismo, TDAH, dislexia, discalculia), trastornos emocionales, de conducta y deterioro cognitivo, entre otros."
   - question: "¿Qué pruebas se utilizan?"
-    answer: "Utilizamos instrumentos estandarizados y validados internacionalmente, seleccionados según la edad y necesidades específicas de cada persona. Estos incluyen escalas de inteligencia (WISC, WAIS), pruebas de atención y funciones ejecutivas, evaluaciones de memoria, lenguaje, habilidades visoespaciales, y cuestionarios de comportamiento y regulación emocional. Todas nuestras especialistas están certificadas en estos instrumentos."
+    answer: "Todas nuestras evaluaciones se realizan mediante pruebas estandarizadas internacionales y reconocidas por su evidencia científica, diseñadas para evaluar de manera objetiva funciones cognitivas, lenguaje, habilidades académicas, aspectos emocionales y conductuales. Esto garantiza que los resultados sean fiables, válidos y puedan sustentar un diagnóstico y apoyar un plan de intervención preciso." 
   - question: "¿Por qué el tiempo de espera puede ser prolongado?"
-    answer: "El tiempo de espera puede variar debido a la alta demanda de servicios especializados y al proceso meticuloso que requiere cada evaluación. Cada caso necesita tiempo suficiente para la aplicación de pruebas, análisis detallado de resultados, integración de información y elaboración de informes completos. Priorizamos la calidad sobre la cantidad para garantizar evaluaciones precisas y recomendaciones efectivas."
+    answer: "Entendemos que en ocasiones no contamos con disponibilidad inmediata y seguimos trabajando para optimizar nuestros tiempos de atención. Cada evaluación se realiza de manera personalizada por una neuropsicóloga especialista, lo que garantiza un proceso clínico cuidadoso y de calidad. Por esta razón, no realizamos evaluaciones masivas. Sin embargo, nuestro equipo revisa constantemente la agenda y realiza ajustes ante cancelaciones, con el propósito de ofrecer atención lo antes posible." 
 ---
 
 # Homepage Content

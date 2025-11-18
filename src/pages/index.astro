@@ -1,14 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import WhatsAppButton from '../components/ui/WhatsAppButton.astro';
 import EspecialistasButton from '../components/ui/EspecialistasButton.astro';
+
+// Import hero images
+import consultorioFoto01 from '../assets/consultorio-foto-01.webp';
+import consultorioFoto02 from '../assets/consultorio-foto-02.webp';
+import equipoFoto01 from '../assets/equipo-foto-01.webp';
 
 const homepageData = await getEntry('homepage', 'index');
 
 if (!homepageData) {
   throw new Error('No homepage content found');
 }
+
+const { data } = homepageData;
+const { hero, about, services, faq } = data;
+
+// Map image strings to imported images
+const imageMap: { [key: string]: ImageMetadata } = {
+  'consultorio-foto-01.webp': consultorioFoto01,
+  'consultorio-foto-02.webp': consultorioFoto02,
+  'equipo-foto-01.webp': equipoFoto01,
+};
 ---
 
 <!-- Swiper Styles -->
@@ -48,7 +64,31 @@ if (!homepageData) {
           <div class="swiper-wrapper">
             {homepageData.data.hero.images.map((image, index) => (
               <div class="swiper-slide">
-                <img src={image} alt={`Hero Image ${index + 1}`} class="w-full h-full object-cover object-top" />
+                {(() => {
+                  const resolvedImage = imageMap[image] || image;
+                  return index === 0 ? (
+                    <Image
+                      src={resolvedImage}
+                      alt={`Hero Image ${index + 1}`}
+                      class="w-full h-full object-cover object-top"
+                      fetchpriority="high"
+                      loading="eager"
+                      width={1920}
+                      height={1080}
+                      format="webp"
+                      quality={90}
+                    />
+                  ) : (
+                    <Image
+                      src={resolvedImage}
+                      alt={`Hero Image ${index + 1}`}
+                      class="w-full h-full object-cover object-top"
+                      width={1920}
+                      height={1080}
+                      format="webp"
+                    />
+                  );
+                })()}
               </div>
             ))}
           </div>
@@ -65,7 +105,7 @@ if (!homepageData) {
           <h1 style="color: #f6f6f6; font-size: 1.8rem line-height: 1;">
             {homepageData.data.hero.title}
           </h1>
-          <p style="color: #f6f6f6; line-height: 1; font-size: 1.25rem; margin-bottom: 22px;">
+          <p style="color: #f6f6f6; line-height: 1.5; font-size: 1.25rem; margin-bottom: 22px;">
             {homepageData.data.hero.subtitle}
           </p>
           <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
