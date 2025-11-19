@@ -7,7 +7,11 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://centroneurop.com',
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    changefreq: 'weekly',
+    priority: 0.7,
+    lastmod: new Date(),
+  })],
   vite: {
     plugins: [tailwindcss()],
     build: {
