@@ -65,7 +65,17 @@ faq:
   - question: "¿Qué pruebas se utilizan?"
     answer: "Todas nuestras evaluaciones se realizan mediante pruebas estandarizadas internacionales y reconocidas por su evidencia científica, diseñadas para evaluar de manera objetiva funciones cognitivas, lenguaje, habilidades académicas, aspectos emocionales y conductuales. Esto garantiza que los resultados sean fiables, válidos y puedan sustentar un diagnóstico y apoyar un plan de intervención preciso." 
   - question: "¿Por qué el tiempo de espera puede ser prolongado?"
-    answer: "Entendemos que en ocasiones no contamos con disponibilidad inmediata y seguimos trabajando para optimizar nuestros tiempos de atención. Cada evaluación se realiza de manera personalizada por una neuropsicóloga especialista, lo que garantiza un proceso clínico cuidadoso y de calidad. Por esta razón, no realizamos evaluaciones masivas. Sin embargo, nuestro equipo revisa constantemente la agenda y realiza ajustes ante cancelaciones, con el propósito de ofrecer atención lo antes posible." 
+    answer: "Entendemos que en ocasiones no contamos con disponibilidad inmediata y seguimos trabajando para optimizar nuestros tiempos de atención. Cada evaluación se realiza de manera personalizada por una neuropsicóloga especialista, lo que garantiza un proceso clínico cuidadoso y de calidad. Por esta razón, no realizamos evaluaciones masivas. Sin embargo, nuestro equipo revisa constantemente la agenda y realiza ajustes ante cancelaciones, con el propósito de ofrecer atención lo antes posible."
+  - question: "¿Trabajan CAA (Comunicación Aumentativa y Alternativa)?"
+    answer: "Sí. Incorporamos sistemas de comunicación aumentativa y alternativa, como tableros de comunicación y dispositivos electrónicos, cuando el lenguaje oral no es suficiente para expresar necesidades o pensamientos. La evidencia científica más reciente demuestra que el uso de CAA no limita el desarrollo del lenguaje oral; por el contrario, lo favorece. En centro neurop, trabajar con CAA no significa dejar de estimular el habla, ambos procesos se abordan de manera complementaria, asegurando que cada persona pueda comunicarse mientras continuamos favoreciendo el desarrollo de lenguaje verbal. Creemos firmemente que toda persona tiene derecho a contar con medios efectivos y dignos para comunicarse, es por esto que adaptamos cada intervención a las necesidades individuales de cada paciente."
+  - question: "¿Diagnostican autismo?"
+    answer: "Sí. Todas nuestras neuropsicólogas cuentan con acreditación oficial en las pruebas ADOS-2 (Escala de Observación para Diagnóstico de Autismo) y ADI-R (Entrevista Diagnóstica para Autismo), reconocidas internacionalmente como los instrumentos estándar de oro en el diagnóstico."
+  - question: "¿Para qué sirve la terapia de aprendizaje?"
+    answer: "La terapia cognitiva o de aprendizaje tiene el objetivo de estimular procesos cognitivos necesarios para desarrollar habilidades en el aprendizaje, autonomía e independencia, así como de apoyar en consolidación de habilidades académicas correspondientes a la edad y en la implementación de adecuaciones curriculares con base a las necesidades espécificas."
+  - question: "¿Para qué sirve la terapia emocional?"
+    answer: "Favorece el manejo de emociones, la reducción de ansiedad o frustración y la mejora en habilidades sociales y conductuales."
+  - question: "¿Qué edades atienden?"
+    answer: "Atendemos niños, adolescentes y adultos, adaptando cada proceso a las necesidades del paciente y su contexto."
 ---
 
 # Homepage Content
