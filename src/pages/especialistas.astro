@@ -137,12 +137,16 @@ const imageMap: { [key: string]: ImageMetadata } = {
                 ))}
               </div>
               <div class="text-sm text-neutral-600 flex-grow">
-                <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
-                <ul class="list-disc list-inside space-y-1">
-                  {especialista.certificaciones.map((cert) => (
-                    <li>{cert}</li>
-                  ))}
-                </ul>
+                {especialista.certificaciones.length > 0 && (
+                  <>
+                    <p class="font-semibold mb-2">Certificaciones y diplomados:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                      {especialista.certificaciones.map((cert) => (
+                        <li>{cert}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
 
               <div class="mt-4 pt-4 border-t border-neutral-200 text-center">
